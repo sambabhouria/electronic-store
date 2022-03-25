@@ -1,6 +1,6 @@
-# Mongo-Express-React-Node-Ecommerce-Shopping-Store
+# Mongo-Express-React-Node-Ecommerce-Electronic-Shopping-Store
 
-# clothshopp
+# electronic store
 
 Online Clothing Store using the MERN stack
 
