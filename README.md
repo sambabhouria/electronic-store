@@ -19,6 +19,7 @@ Online Clothing Store using the MERN stack
  ![screenshot](10.png)
  ![screenshot](11.png)
  ![screenshot](12.png)
+ ![screenshot](13.png)
 
 # Features:
 
