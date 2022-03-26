@@ -47,11 +47,11 @@ const ProductListScreen = () => {
     dispatch({ type: PRODUCT_CREATE_RESET })
 
     if (!userInfo || !userInfo.isAdmin) {
-      navigate.push('/login')
+      navigate('/login')
     }
 
     if (successCreate) {
-      navigate.push(`/admin/product/${createdProduct._id}/edit`)
+      navigate(`/admin/product/${createdProduct._id}/edit`)
     } else {
       dispatch(listProducts('', pageNumber))
     }

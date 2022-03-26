@@ -51,7 +51,7 @@ const OrderScreen = () => {
 
   useEffect(() => {
     if (!userInfo) {
-      navigate.push('/login')
+      navigate('/login')
     }
 
     const addPayPalScript = async () => {
