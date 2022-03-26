@@ -15,9 +15,9 @@ const PlaceOrderScreen = () => {
   const cart = useSelector((state) => state.cart)
 
   if (!cart.shippingAddress.address) {
-    navigate.push('/shipping')
+    navigate('/shipping')
   } else if (!cart.paymentMethod) {
-    navigate.push('/payment')
+    navigate('/payment')
   }
   //   Calculate prices
   const addDecimals = (num) => {

@@ -12,7 +12,7 @@ const PaymentScreen = () => {
   const { shippingAddress } = cart
   let navigate = useNavigate();
   if (!shippingAddress.address) {
-    navigate.push('/shipping')
+    navigate('/shipping')
   }
 
   const [paymentMethod, setPaymentMethod] = useState('PayPal')
@@ -22,7 +22,7 @@ const PaymentScreen = () => {
   const submitHandler = (e) => {
     e.preventDefault()
     dispatch(savePaymentMethod(paymentMethod))
-    navigate.push('/placeorder')
+    navigate('/placeorder')
   }
 
   return (

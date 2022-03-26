@@ -47,7 +47,7 @@ const ProductScreen = () => {
   }, [dispatch, successProductReview])
 
   const addToCartHandler = () => {
-    navigate.push(`/cart/${params.id}?qty=${qty}`)
+    navigate(`/cart/${params.id}?qty=${qty}`)
   }
 
   const submitHandler = (e) => {
