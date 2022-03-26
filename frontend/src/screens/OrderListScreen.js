@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
+import { useNavigate } from "react-router-dom";
 import { Table, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { listOrders } from '../actions/orderActions'
 
-const OrderListScreen = ({ history }) => {
+// const OrderListScreen = ({ history }) => {
+const OrderListScreen = () => {
   const dispatch = useDispatch()
-
+  let navigate = useNavigate();
   const orderList = useSelector((state) => state.orderList)
   const { loading, error, orders } = orderList
 
@@ -19,9 +21,9 @@ const OrderListScreen = ({ history }) => {
     if (userInfo && userInfo.isAdmin) {
       dispatch(listOrders())
     } else {
-      history.push('/login')
+      navigate.push('/login')
     }
-  }, [dispatch, history, userInfo])
+  }, [dispatch, navigate, userInfo])
 
   return (
     <>

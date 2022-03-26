@@ -1,7 +1,7 @@
 
-   
 import React, { useEffect } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { Table, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
@@ -14,8 +14,11 @@ import {
 } from '../actions/productActions'
 import { PRODUCT_CREATE_RESET } from '../constants/productConstants'
 
-const ProductListScreen = ({ history, match }) => {
-  const pageNumber = match.params.pageNumber || 1
+//  const ProductListScreen = ({ history, match }) => {
+const ProductListScreen = () => {
+  let params = useParams();
+  let navigate = useNavigate();
+  const pageNumber = params.pageNumber || 1
 
   const dispatch = useDispatch()
 
@@ -44,17 +47,17 @@ const ProductListScreen = ({ history, match }) => {
     dispatch({ type: PRODUCT_CREATE_RESET })
 
     if (!userInfo || !userInfo.isAdmin) {
-      history.push('/login')
+      navigate.push('/login')
     }
 
     if (successCreate) {
-      history.push(`/admin/product/${createdProduct._id}/edit`)
+      navigate.push(`/admin/product/${createdProduct._id}/edit`)
     } else {
       dispatch(listProducts('', pageNumber))
     }
   }, [
     dispatch,
-    history,
+    navigate,
     userInfo,
     successDelete,
     successCreate,

@@ -7,6 +7,8 @@ import Loader from '../components/Loader'
 import { listUsers, deleteUser } from '../actions/userActions'
 
 const UserListScreen = ({ history }) => {
+console.log("🚀 ~ file: UserListScreen.js ~ line 10 ~ UserListScreen ~ history", history)
+
   const dispatch = useDispatch()
 
   const userList = useSelector((state) => state.userList)
