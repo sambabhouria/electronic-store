@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Table, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
