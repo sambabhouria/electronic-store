@@ -7,11 +7,15 @@ Online Clothing Store using the MERN stack
 
 # Screen Shot
  ![screenshot](1.png)
+ ![screenshot](11.png)
  ![screenshot](2.png)
+ ![screenshot](10.png)
  ![screenshot](3.png)
  ![screenshot](4.png)
  ![screenshot](5.png)
  ![screenshot](6.png)
+ ![screenshot](8.png)
+ ![screenshot](9.png)
 
 # Features:
 
