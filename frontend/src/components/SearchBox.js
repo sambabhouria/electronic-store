@@ -10,9 +10,9 @@ const SearchBox = () => {
   const submitHandler = (e) => {
     e.preventDefault()
     if (keyword.trim()) {
-      navigate.push(`/search/${keyword}`)
+      navigate(`/search/${keyword}`)
     } else {
-      navigate.push('/')
+      navigate('/')
     }
   }
 
